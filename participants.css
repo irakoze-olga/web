@@ -1,0 +1,93 @@
+ * {
+     padding: 0px;
+     margin: 0px;
+ }
+
+ body {
+     background-color: #f7ecec;
+     color: #000000;
+     transition: background-color 0.3s, color 0.3s;
+     font-size: 14px;
+     font-family: verdana;
+ }
+
+ .navigation {
+     background-color: rgb(218, 206, 206);
+     text-align: center;
+     word-spacing: 4px;
+     color: rgb(57, 51, 51);
+     height: 100px;
+     position: sticky;
+     margin-right: 0px;
+ }
+
+ nav a {
+     padding: 20px;
+     font-size: 20px;
+     text-decoration: none;
+ }
+
+ 
+ .nav-links a {
+     color: rgb(57, 51, 51);
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 0.95rem;
+     transition: color 0.2s ease;
+     position: relative;
+     padding: 20px;
+ }
+
+ .nav-links a::after {
+     content: '';
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: 8px;
+     width: 0;
+     height: 3px;
+     background: rgb(149, 149, 246);
+     border-radius: 2px;
+     transition: width 0.25s ease;
+ }
+
+ .nav-links a:hover::after,
+ .nav-links a:focus::after {
+     width: 70%;
+ }
+ img{
+    border-radius: 200px;
+    border: 3px solid rgb(68, 65, 65);
+    width : 350px;
+    height: 350px;
+ }
+ figcaption{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+
+    
+
+ }
+ .participants{
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    left: 50px;
+ }
+ .hotels{
+    float: right;
+    position: relative;
+    bottom: 1200px;
+    right: 200px;
+ }
+ .moto{
+    position: relative;
+    left: 470px;
+ }
+.drones {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 30px;
+}

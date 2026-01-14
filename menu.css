@@ -1,0 +1,124 @@
+* {
+     padding: 0px;
+     margin: 0px;
+
+ }
+
+ body {
+     color: rgb(44, 39, 39);
+     transition: background-color 0.3s, color 0.3s;
+     font-size: 14px;
+     font-family: verdana;
+     font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0px;
+}
+
+ .navigation {
+     background-color: rgb(218, 206, 206);
+     text-align: center;
+     word-spacing: 4px;
+     color: rgb(57, 51, 51);
+     height: 100px;
+     position: sticky;
+     margin-right: 0px;
+ }
+a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ nav {
+     position: sticky;
+ }
+ nav a {
+     padding: 20px;
+     font-size: 20px;
+     text-decoration: none;
+     position: sticky;
+ }
+
+
+ .nav-links a {
+     color: rgb(57, 51, 51);
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 0.95rem;
+     transition: color 0.2s ease;
+     position: relative;
+     padding: 20px;
+ }
+
+ .nav-links a::after {
+     content: '';
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: 8px;
+     width: 0;
+     height: 3px;
+     background: rgb(149, 149, 246);
+     border-radius: 2px;
+     transition: width 0.25s ease;
+ }
+
+ .nav-links a:hover::after,
+ .nav-links a:focus::after {
+     width: 70%;
+ }
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.card button {
+    margin: 15px 0 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #ff6600;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+    background: #e05500;
+    transform: scale(1.05);
+}

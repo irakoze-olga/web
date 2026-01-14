@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: rgb(246, 236, 236);
+    color: rgb(46, 42, 42);
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation {
+    background-color: rgb(218, 206, 206);
+    text-align: center;
+    word-spacing: 4px;
+    color: rgb(57, 51, 51);
+    height: 100px;
+    position: sticky;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: rgb(57, 51, 51);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    position: relative;
+    padding: 20px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+    width: 0;
+    height: 3px;
+    background: rgb(149, 149, 246);
+    border-radius: 2px;
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 70%;
+}
+
+.page {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-card {
+    background: #fff;
+    width: 360px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4e73df;
+}
+
+.radio-group,
+.checkbox-group {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #4e73df;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3756c9;
+}
