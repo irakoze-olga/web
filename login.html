@@ -22,7 +22,7 @@
     <div class="login-container">
         <h2>Login</h2>
 
-        <form>
+        <form method ="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Email</label>
                 <input type="email" placeholder="Enter your email" required>
@@ -32,8 +32,9 @@
                 <label>Password</label>
                 <input type="password" placeholder="Enter your password" required>
             </div>
-
-            <button type="submit" class="login-btn">Login</button>
+            <button type="file" value="">Browse</button>
+            <button type="submit" class="login-btn" >Login</button>
+            <button type="reset" value="clear">Reset</button>
         </form>
 
         <div class="signup-link">
