@@ -1,0 +1,187 @@
+/* Global base styles for responsiveness (mobile-first) */
+:root {
+    --container-max: 1200px;
+    --gutter: 1rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #222;
+    background: #fff;
+    overflow-x: hidden
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--gutter)
+}
+
+/* Navigation */
+.navigation {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative
+}
+
+.nav-links {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    padding: .5rem 1rem;
+    align-items: center
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: .4rem .6rem
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg)
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg)
+}
+
+/* Images and media */
+img,
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+/* Utility grid */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr
+}
+
+.grid.two {
+    grid-template-columns: 1fr
+}
+
+.grid.three {
+    grid-template-columns: 1fr
+}
+
+/* Forms */
+input,
+button,
+select,
+textarea {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+/* Responsive breakpoints */
+@media (min-width:480px) {
+    html {
+        font-size: 16px
+    }
+}
+
+@media (min-width:768px) {
+    .grid.two {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .grid.three {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .nav-links {
+        gap: 1rem
+    }
+}
+
+@media (min-width:1024px) {
+    html {
+        font-size: 18px
+    }
+}
+
+/* Mobile navigation */
+@media (max-width:768px) {
+    .hamburger {
+        display: flex
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 60px;
+        background: #fff;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        padding: 2rem;
+        gap: 1rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: calc(100vh - 60px);
+        overflow-y: auto
+    }
+
+    .nav-links.active {
+        transform: translateX(0)
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee
+    }
+}

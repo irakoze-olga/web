@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/sign-up.css">
+</head>
+
+<body>
+
+    <div class="navigation">
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="../pages/home.html">Home</a>
+            <a href="../pages/login.html">Login</a>
+            <a href="../pages/sign-up.html">Sign up</a>
+            <a href="../pages/participants.html">Participants</a>
+            <a href="../pages/menu.html">Menu</a>
+        </nav>
+    </div>
+
+    <div class="page">
+        <form class="form-card">
+            <h2>Sign up for free</h2>
+            <label>First Name</label>
+            <input type="text" name="fname" pattern="[a-zA-Z]{8 , 30}">
+            <label>Last Name</label>
+            <input type="text">
+            <label>Email</label>
+            <input type="email">
+            <label>Password</label>
+            <input type="password">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+            </div>
+
+            <label>Spoken Languages</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Kinyarwanda</label>
+                <label><input type="checkbox"> Kiswahili</label>
+                <label><input type="checkbox"> English</label>
+                <label><input type="checkbox"> French</label>
+                <label><input type="checkbox"> Arab</label>
+            </div>
+
+            <label>Country</label>
+            <select>
+                <option>Rwanda</option>
+                <option>Uganda</option>
+                <option>DRC</option>
+                <option>Tanzania</option>
+                <option>Burundi</option>
+                <option>Egypt</option>
+                <option>Morocco</option>
+            </select>
+
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
